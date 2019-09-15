@@ -1,27 +1,32 @@
 # Learning Typescript
 
-Steps before starting:
+This project documents my learning experience with Typescript.
 
-* `npm init` -
-    started a javascript project
-* `npm i --save-dev jest typescript ts-jest @types/jest` -
-    install typescript and ts-jest for testing
+## Steps
 
-    **package.json**
-    ```json
-    {
-      "scripts": {
-        "test": "jest"
-      }
-    }
+1. Installed needed packages
+
+    ```bash
+    # Start a node project
+    npm init
+    # Install typescript and ts-jest for testing
+    npm i --save-dev \
+        typescript \
+        jest \
+        ts-jest \
+        @types/jest
+    # Add code style with StandardJs
+    npm i --save-dev \
+        standard \
+        @typescript-eslint/eslint-plugin \
+        @typescript-eslint/linter snazzy
     ```
-* `npm i --save-dev standard @typescript-eslint/eslint-plugin @typescript-eslint/linter snazzy` -
-    code style with standardjs
+2. Configured project's **package.json**
 
-    **package.json**
     ```json
     {
       "scripts": {
+        "test": "jest",
         "lint": "standard **/*.[jt]s --fix --verbose | snazzy"
       },
       "standard": {
@@ -35,4 +40,4 @@ Steps before starting:
       }
     }
     ```
-* Created my first test `src/function-declaration.test.ts`
+3. Created first typescript test `src/function-declaration.test.ts`
